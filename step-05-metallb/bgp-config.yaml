@@ -1,0 +1,31 @@
+# ============================================
+# MetalLB BGP Configuration
+# Step 5c: BGPPeer + BGPAdvertisement
+#
+# MetalLB speakers peer with k8s-bgp-speaker
+# via kind network (192.168.97.5)
+# ============================================
+
+# BGPPeer — peer with k8s-bgp-speaker on kind network
+apiVersion: metallb.io/v1beta2
+kind: BGPPeer
+metadata:
+  name: k8s-bgp-speaker
+  namespace: metallb-system
+spec:
+  myASN: 65001
+  peerASN: 65001
+  peerAddress: 192.168.97.5
+  peerPort: 179
+---
+# BGPAdvertisement — advertise anycast-vip-pool via BGP
+apiVersion: metallb.io/v1beta1
+kind: BGPAdvertisement
+metadata:
+  name: anycast-vip-advert
+  namespace: metallb-system
+spec:
+  ipAddressPools:
+  - anycast-vip-pool
+  aggregationLength: 32
+  localPref: 100
