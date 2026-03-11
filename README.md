@@ -26,7 +26,7 @@ K8s cluster (kind) with Anycast app pods → VIP: 10.100.0.1
 ## Baby-Steps Roadmap
 
 - [x] **Step 1:** Repo setup + OrbStack/Docker installation & verification
-- [ ] **Step 2:** Run first FRR BGP container (mac-speaker)
+- [x] **Step 2:** Run first FRR BGP container (mac-speaker)
 - [ ] **Step 3:** Run second FRR BGP container (k8s-bgp-speaker) + establish iBGP session
 - [ ] **Step 4:** Run third FRR container (juniper-sim) + establish eBGP sessions
 - [ ] **Step 5:** Create kind Kubernetes cluster
@@ -73,7 +73,7 @@ Follow the steps in order. Each step directory contains its own `README.md` with
 | Directory | Step |
 |-----------|------|
 | [`step-01-setup/`](./step-01-setup/) | Install & verify OrbStack + Docker + CLI tools |
-| `step-02-mac-speaker/` *(coming soon)* | Run first FRR BGP container |
+| [`step-02-mac-speaker/`](./step-02-mac-speaker/) | Run first FRR BGP container |
 | `step-03-ibgp/` *(coming soon)* | Add k8s-bgp-speaker and establish iBGP session |
 | `step-04-ebgp/` *(coming soon)* | Add juniper-sim and establish eBGP sessions |
 | `step-05-kind-cluster/` *(coming soon)* | Create kind Kubernetes cluster |
