@@ -1,0 +1,4 @@
+# Step 4 — Required Tools (verified on Mac M4 Max)
+kind     v0.31.0  darwin/arm64
+kubectl  v1.32.0
+docker   28.5.2
