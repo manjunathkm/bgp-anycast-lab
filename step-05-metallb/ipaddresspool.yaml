@@ -1,0 +1,15 @@
+# ============================================
+# MetalLB IPAddressPool
+# Step 5b: Anycast VIP pool 10.100.100.0/24
+# ============================================
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: anycast-vip-pool
+  namespace: metallb-system
+spec:
+  addresses:
+  - 10.100.100.0/24
+---
+# L2Advertisement disabled — we use BGP mode only
+# BGPAdvertisement configured in step-05c
