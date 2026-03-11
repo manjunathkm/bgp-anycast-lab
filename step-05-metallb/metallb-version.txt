@@ -1,0 +1,4 @@
+MetalLB v0.14.9
+Install manifest: https://raw.githubusercontent.com/metallb/metallb/v0.14.9/config/manifests/metallb-native.yaml
+Verified on: Mac M4 Max (OrbStack), kind v0.31.0, k8s v1.32.0 ARM64
+Pods: 1 controller + 3 speakers (one per node)
